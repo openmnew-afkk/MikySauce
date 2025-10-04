@@ -1,0 +1,106 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Dark navy base (Telegram Mini App style) */
+    --background: 214 65% 11%; /* #0A1A2F */
+    --foreground: 210 40% 98%;
+    --nav-height: 86px; /* height reserved for bottom navigation (including safe area) */
+
+    --card: 215 45% 14%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 215 45% 14%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 217.2 91.2% 59.8%; /* bright blue for accents */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 35% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 24%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 222 32% 22%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 219 28% 23%;
+    --input: 219 28% 23%;
+    --ring: 217.2 91.2% 59.8%;
+
+    --radius: 0.9rem;
+
+    /* Sidebar tokens kept consistent for potential future use */
+    --sidebar-background: 214 65% 11%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 219 28% 23%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Same as root to keep a consistent dark experience */
+    --background: 214 65% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 45% 14%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 215 45% 14%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 35% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 20% 24%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 222 32% 22%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 219 28% 23%;
+    --input: 219 28% 23%;
+    --ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 214 65% 11%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 35% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 219 28% 23%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
